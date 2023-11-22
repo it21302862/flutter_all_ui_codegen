@@ -15,16 +15,21 @@ class _ChatHistoryScreenState extends State<ChatHistoryScreen> {
       appBar: AppBar(
         toolbarHeight: 60,
         backgroundColor: Colors.white,
-        title: Container(
-          width: MediaQuery.of(context).size.width * 0.8,
-          margin: const EdgeInsets.only(left:300,top:5,right: 5,bottom: 5), // Adjust the margin 
-           // Adjust the padding 
-            child: const Text(
-              'Chat History',
-              style: TextStyle(color: Colors.black, fontSize: 20),
-            ),
+        // title: Container(
+        //   width: MediaQuery.of(context).size.width * 0.8,
+        //   margin: const EdgeInsets.only(left:300,top:5,right: 5,bottom: 5), // Adjust the margin 
+        //    // Adjust the padding 
+        //     child: const Text(
+        //       'Chat History',
+        //       style: TextStyle(color: Colors.black, fontSize: 20),
+        //     ),
           
-        ),
+        // ),
+         title: const Text(
+            'Chat History',
+            style: TextStyle(color: Colors.black, fontSize: 20),
+          ),
+          centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black, size: 20.0),
           onPressed: () {

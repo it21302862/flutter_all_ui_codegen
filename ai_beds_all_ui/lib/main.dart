@@ -1,4 +1,5 @@
 
+import 'package:ai_beds_all_ui/screens/chat_ui/chat_history_screen.dart';
 import 'package:ai_beds_all_ui/screens/home.dart';
 import 'package:ai_beds_all_ui/screens/hotel_ui/hotel_home_screen.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return  const Scaffold(
-      body: HotelHomeScreen()
+      body: ChatHistoryScreen()
     );
   }
 }
