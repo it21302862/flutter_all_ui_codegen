@@ -13,14 +13,15 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return MaterialApp(   
+      home: Scaffold(  
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Center(
             child: Container(
               // width: 800,
               width: MediaQuery.of(context).size.width * 0.7,
+              height: MediaQuery.of(context).size.height * 0.9,
               color: const Color(0xFFF5F5F5),
               child: ListView(
                 children: [
@@ -128,7 +129,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   if (MediaQuery.of(context).size.width <
                       600) // Adjust the breakpoint
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 5),
                   if (MediaQuery.of(context).size.width >
                       600) // Adjust the breakpoint
                     const SizedBox(height: 5),
@@ -246,32 +247,66 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  Center(
-                    child: RichText(
-                      text: TextSpan(
-                        style:
-                            const TextStyle(fontSize: 15, color: Colors.black),
-                        children: [
-                          const TextSpan(
-                            text: "Already have an account? ",
-                          ),
-                          TextSpan(
-                            text: 'Login',
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF4169E1),
+                  //   Center(
+                  //     child: SingleChildScrollView(
+                  //       text: TextSpan(
+                  //         style:
+                  //             const TextStyle(fontSize: 15, color: Colors.black),
+                  //         children: [
+                  //           const TextSpan(
+                  //             text: "Already have an account? ",
+                  //           ),
+                  //           TextSpan(
+                  //             text: 'Login',
+                  //             style: const TextStyle(
+                  //               fontWeight: FontWeight.bold,
+                  //               color: Color(0xFF4169E1),
+                  //             ),
+                  //             recognizer: TapGestureRecognizer()
+                  //               ..onTap = () {
+                  //                 Navigator.push(
+                  //                   context,
+                  //                   MaterialPageRoute(
+                  //                       builder: (context) =>
+                  //                           const LoginScreen()),
+                  //                 );
+                  //               },
+                  //           ),
+                  //         ],
+                  //       ),
+                  //     ),
+                  //   ),
+
+                  //   const SizedBox(height: 20),
+                  // ],
+                  SingleChildScrollView(
+                    child: Center(
+                      child: RichText(
+                        text: TextSpan(
+                          style: const TextStyle(
+                              fontSize: 15, color: Colors.black),
+                          children: [
+                            const TextSpan(
+                              text: "Already have an account? ",
                             ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const LoginScreen()),
-                                );
-                              },
-                          ),
-                        ],
+                            TextSpan(
+                              text: 'Login',
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF4169E1),
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const LoginScreen(),
+                                    ),
+                                  );
+                                },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return  const Scaffold(
-      body: ChatHistoryScreen()
+      body: HomeScreen()
     );
   }
 }
@@ -47,3 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
 //HomeScreen-->login,pin,reg
 //HotelHomeScreen-->view,list
 //ChatHistoryScreen-->histrycht
+
+/*todo-->set text bar(hotel_view)
+-->set otp-->overlap(otp_screen)
+*/

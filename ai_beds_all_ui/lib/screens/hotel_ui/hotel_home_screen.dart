@@ -33,31 +33,68 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
     }
   }
 
-  @override
+  // @override
+  // Widget build(BuildContext context) {
+  //   return Scaffold(
+  //     body: Column(
+  //       crossAxisAlignment: CrossAxisAlignment.stretch,
+  //       children: <Widget>[
+  //         getAppBarUI(),
+  //         Expanded(
+  //             child: NestedScrollView(
+  //           headerSliverBuilder: (context, innerBoxIsScrolled) {
+  //             return <Widget>[
+  //               SliverList(
+  //                 delegate: SliverChildBuilderDelegate((context, index) {
+  //                   return Column(
+  //                     children: <Widget>[getMyHotelTextUI(), getTimeDateUI()],
+  //                   );
+  //                 },
+  //                     childCount:
+  //                         1), // Set the childCount to the number of children you have in the Column
+  //               ),
+  //             ];
+  //           },
+  //           body: const HotelListWidget(),
+  //         ))
+  //       ],
+  //     ),
+  //   );
+  // }
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          getAppBarUI(),
-          Expanded(
-              child: NestedScrollView(
-            headerSliverBuilder: (context, innerBoxIsScrolled) {
-              return <Widget>[
-                SliverList(
-                  delegate: SliverChildBuilderDelegate((context, index) {
-                    return Column(
-                      children: <Widget>[getMyHotelTextUI(), getTimeDateUI()],
-                    );
+      body: Center(
+        // Center widget added here
+        child: Container(
+          color: const Color(0xFFF5F5F5),
+          width: MediaQuery.of(context).size.width * 0.7,
+          height: MediaQuery.of(context).size.height * 0.9,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              getAppBarUI(),
+              Expanded(
+                child: NestedScrollView(
+                  headerSliverBuilder: (context, innerBoxIsScrolled) {
+                    return <Widget>[
+                      SliverList(
+                        delegate: SliverChildBuilderDelegate((context, index) {
+                          return Column(
+                            children: <Widget>[
+                              getMyHotelTextUI(),
+                              getTimeDateUI()
+                            ],
+                          );
+                        }, childCount: 1),
+                      ),
+                    ];
                   },
-                      childCount:
-                          1), // Set the childCount to the number of children you have in the Column
+                  body: const HotelListWidget(),
                 ),
-              ];
-            },
-            body: const HotelListWidget(),
-          ))
-        ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

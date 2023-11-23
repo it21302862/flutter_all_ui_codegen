@@ -109,13 +109,13 @@ class _OtpState extends State<OtpScreen> {
                         children: [
                           _textFieldOTP(first: true, last: false),
                           if (MediaQuery.of(context).size.width >= 600) 
-                          const SizedBox(width: 10),
+                          const SizedBox(width: 8),
                           _textFieldOTP(first: false, last: false),
                           if (MediaQuery.of(context).size.width >= 600)
-                          const SizedBox(width: 10),
+                          const SizedBox(width: 8),
                           _textFieldOTP(first: false, last: false),
                           if (MediaQuery.of(context).size.width >= 600)
-                          const SizedBox(width: 10),
+                          const SizedBox(width: 8),
                           _textFieldOTP(first: false, last: true),
                         ],
                       ),
